@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<!--<script type = "text/javascript"src = "gpsScript.js"></script>-->
+	
+	<script>
+		function process(){	
+			var name = document.forms["entries"]["name"].value;
+			if (name == ""){
+				alert("Please enter a name");
+			}
+			else {
+				alert(name);
+			}
+		}
+	</script>
+	</head>
+	<body>
+		<form id="entries" method = "post">
+			 Name: <input type = "text" name = "name" id = "name"/><br>
+			 Longitude: <input type = "" name ="longitude" id = "longitude"><br>	
+			 Latitude: <input type = "" name ="latitude" id = "latitude"><br>
+			 <input type = "button" onclick="process()" value="Submit"/>
+		  </form>
+	</body>
+</html>
