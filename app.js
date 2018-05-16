@@ -1,8 +1,9 @@
 var url = require('url');
 var fs = require('fs');
-eval(fs.readFileSync('gpsScript.js')+'');
+//eval(fs.readFileSync('gpsScript.js')+'');
 
-function renderHTML(path, response) {
+
+function render(path, response) {
 	fs.readFile(path, null, function(error, data) {
 		if(error){
 			response.writeHead(404);
@@ -22,10 +23,13 @@ module.exports = {
 		var path = url.parse(request.url).pathname;
 		switch(path){
 			case '/':
-				renderHTML('./home.html', response);
+				render('./home.html', response);
 				break;
 			case '/process':
-				renderHTML('./process.html', response);
+				render('./process.html', response);
+				break;
+			case '/gpsScript.js':
+				render('./gpsScript.js', response);
 				break;
 			default:
 				response.writeHead(404);

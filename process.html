@@ -2,26 +2,38 @@
 
 <html>
 	<head>
-	<!--<script type = "text/javascript"src = "gpsScript.js"></script>-->
-	
-	<script>
-		function process(){	
-			var name = document.forms["entries"]["name"].value;
-			if (name == ""){
-				alert("Please enter a name");
+		<script type = "text/javascript"src = "gpsScript.js"></script>
+		<script async defer 
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKiyjpYcrcWXTWHN3U5V8Hr5LgRoRLFqE&callback=myMap">
+		</script>
+		<!--<script>
+			function process(){	
+				var name = document.forms["entries"]["name"].value;
+				if (name == ""){
+					alert("Please enter a name");
+				}
+				else {
+					alert(name);
+				}
 			}
-			else {
-				alert(name);
-			}
-		}
-	</script>
+		</script>-->
+		<style>
+		  #map {
+			height: 400px;
+			width: 100%;
+		  }
+		</style>
 	</head>
 	<body>
 		<form id="entries" method = "post">
 			 Name: <input type = "text" name = "name" id = "name"/><br>
-			 Longitude: <input type = "" name ="longitude" id = "longitude"><br>	
-			 Latitude: <input type = "" name ="latitude" id = "latitude"><br>
+			 Latitude: <input type = "number" name ="latitude" id = "latitude"><br>
+			 Longitude: <input type = "number" name ="longitude" id = "longitude"><br>	
 			 <input type = "button" onclick="process()" value="Submit"/>
-		  </form>
+		</form>
+		
+		<h1>Map</h1>
+		<h2 id=returnString ></h2>
+		<div id = "map"></div>		  
 	</body>
 </html>
