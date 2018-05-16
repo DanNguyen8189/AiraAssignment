@@ -1,5 +1,4 @@
 # AiraAssignment
 
 
-Run with command
->node server.js
+Run with command: node server.js
