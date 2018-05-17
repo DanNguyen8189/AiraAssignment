@@ -1,4 +1,5 @@
 # AiraAssignment
 
 
-Run with command: node server.js on local host 8000
+Run with command: node server.js 
+on localhost:8000
