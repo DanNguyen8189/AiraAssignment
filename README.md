@@ -1,4 +1,4 @@
-# AiraAssignment
+# GPS Point Locator
 
 Uses NodeJS as the foundation
 - user can navigate to a page called /process
